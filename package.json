@@ -1,25 +1,35 @@
 {
-  "private": true,
   "name": "nuxt-app",
-  "author": "mo36924",
-  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/mo36924/nuxt-demo#readme",
+  "bugs": {
+    "url": "https://github.com/mo36924/nuxt-demo/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mo36924/nuxt-demo.git"
   },
-  "bugs": {
-    "url": "https://github.com/mo36924/nuxt-demo/issues"
-  },
-  "homepage": "https://github.com/mo36924/nuxt-demo#readme",
+  "license": "MIT",
+  "author": "mo36924",
   "scripts": {
+    "format": "run-s format:*",
+    "format:sort-package-json": "sort-package-json",
+    "format:prettier": "prettier --write .",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "prettier": {
+    "printWidth": 140,
+    "trailingComma": "all"
+  },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.5.0"
+    "npm-run-all": "^4.1.5",
+    "nuxt": "^3.5.0",
+    "prettier": "^2.8.8",
+    "sort-package-json": "^2.4.1"
   }
 }
